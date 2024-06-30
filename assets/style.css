@@ -1,0 +1,3 @@
+div#custom-css.standalone-video-embed .vjs-contextmenu-ui-menu {
+    display: none !important;
+}
