@@ -1,9 +1,9 @@
 {
-  "name": "peertube-plugin-quickstart",
-  "description": "PeerTube plugin quickstart",
-  "version": "0.0.4",
-  "author": "Chocobozzz",
-  "bugs": "https://framagit.org/framasoft/peertube/peertube-plugin-quickstart/issues",
+  "name": "spexflix-peertube-plugin",
+  "description": "Spexflix plugin for use within Kårspexet",
+  "version": "0.0.1",
+  "author": "LogFlames",
+  "bugs": "",
   "clientScripts": [
     {
       "script": "dist/common-client-plugin.js",
@@ -18,7 +18,7 @@
   "engine": {
     "peertube": ">=1.3.0"
   },
-  "homepage": "https://framagit.org/framasoft/peertube/peertube-plugin-quickstart",
+  "homepage": "https://github.com/LogFlames/spexflix-peetube-plugin",
   "keywords": [
     "peertube",
     "plugin"
@@ -30,9 +30,6 @@
   },
   "staticDirs": {
     "images": "public/images"
-  },
-  "translations": {
-    "fr-FR": "./languages/fr.json"
   },
   "devDependencies": {
     "esbuild": "^0.14.36"
