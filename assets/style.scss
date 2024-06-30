@@ -1,10 +1,14 @@
 // Put your SCSS here.
+
+// --- DISABLE RIGHT-CLICK MENU IN EMBED ---
 #custom-css.standalone-video-embed .vjs-contextmenu-ui-menu {
     display: none !important;
 }
 
+
+// --- NETFLIX SPINNER ---
 #custom-css .vjs-loading-spinner {
-    animation: load_spinner .9s linear infinite;
+    animation: load_spinner .9s linear infinite !important;
 	background-image: url(https://spexflix-cms.karspexet.se/plugins/spexflix/1.0.0/static/images/site-spinner.png);
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -15,6 +19,11 @@
 	right: 1px;
 	text-align: center;
 	top: 1px;
+    border: none;
+    height: 7vh;
+    width: 7vh;
+    min-width: 5rem;
+    min-height: 5rem;
 }
 
 @keyframes load_spinner {
