@@ -51,7 +51,7 @@
     "lint:script": "npx eslint --ext .ts --ext .js .",
     "lint:styles": "stylelint 'assets/**/*.scss'",
     "test": "npm-run-all -p lint:script lint:styles",
-    "reinstall": "cd /var/www/peertube/peertube-latest/ && NODE_ENV=production NODE_CONFIG_DIR=/var/www/peertube/config yarn plugin:uninstall -n peertube-plugin-spexflix && NODE_ENV=production NODE_CONFIG_DIR=/var/www/peertube/config yarn plugin:install -p /home/peertube/peertube-plugin-spexflix"
+    "reinstall": "cd /var/www/peertube/peertube-latest/ && NODE_ENV=production NODE_CONFIG_DIR=/var/www/peertube/config yarn plugin:uninstall -- --npm-name peertube-plugin-spexflix && NODE_ENV=production NODE_CONFIG_DIR=/var/www/peertube/config yarn plugin:install -- --plugin-path /home/peertube/peertube-plugin-spexflix"
   },
   "staticDirs": {
     "images": "public/images"
