@@ -27,7 +27,8 @@
   "library": "./main.js",
   "scripts": {
     "prepare": "npm run build",
-    "build": "node ./scripts/build.js"
+    "build": "node ./scripts/build.js",
+    "reinstall": "cd /var/www/peertube/peertube-latest/ && NODE_ENV=production NODE_CONFIG_DIR=/var/www/peertube/config yarn plugin:uninstall -p /home/peertube/peertube-plugin-spexflix && NODE_ENV=production NODE_CONFIG_DIR=/var/www/peertube/config yarn plugin:install -p /home/peertube/peertube-plugin-spexflix"
   },
   "staticDirs": {
     "images": "public/images"
