@@ -2,3 +2,29 @@
 #custom-css.standalone-video-embed .vjs-contextmenu-ui-menu {
     display: none !important;
 }
+
+#custom-css .vjs-loading-spinner {
+    animation: load_spinner .9s linear infinite;
+	background-image: url(https://spexflix-cms.karspexet.se/plugins/peertube-plugin-spexflix/1.0.0/static/site-spinner.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	bottom: 1px;
+	left: 1px;
+	margin: auto;
+	position: absolute;
+	right: 1px;
+	text-align: center;
+	top: 1px;
+}
+
+@keyframes load_spinner {
+    0% {
+      transform:rotate(0deg) /*!rtl:ignore*/
+    }
+    50% {
+      transform:rotate(180deg) /*!rtl:ignore*/
+    }
+    to {
+      transform:rotate(1turn) /*!rtl:ignore*/
+    }
+  }
