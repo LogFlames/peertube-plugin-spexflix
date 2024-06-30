@@ -14,6 +14,18 @@
       "scopes": [
         "common"
       ]
+    },
+    {
+      "script": "dist/client/video-watch-client-plugin.js",
+      "scopes": [
+        "video-watch"
+      ]
+    },
+    {
+      "script": "dist/client/embed-client-plugin.js",
+      "scopes": [
+        "embed"
+      ]
     }
   ],
   "css": [

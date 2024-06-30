@@ -8,7 +8,7 @@ async function register ({ registerHook, peertubeHelpers }: RegisterClientOption
   registerHook({
     target: 'action:embed.player.loaded',
     handler: () => {
-      console.log("c hello");
+      console.log("hello vw");
     }
   });
 }
