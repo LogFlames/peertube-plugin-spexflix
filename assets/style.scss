@@ -86,7 +86,7 @@
     .vjs-play-progress {
         background-color: red;
 
-        ::before {
+        &::before {
             opacity: 1;
             color: red;
         }
