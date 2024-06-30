@@ -25,6 +25,7 @@
     min-width: 5rem;
     min-height: 5rem;
     visibility: visible !important;
+    opacity: 1 !important;
 }
 
 @keyframes load_spinner {
@@ -37,4 +38,15 @@
     to {
       transform:rotate(1turn) /*!rtl:ignore*/
     }
-  }
+}
+
+// --- NETFLIX BIG PLAY BUTTON ---
+#custom-css .video-js .vjs-big-play-button {
+    border-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#custom-css .video-js .vjs-big-play-button:hover {
+    border-color: rgba(255, 255, 255, 1.0);
+    background-color: rgba(0, 0, 0, 1.0);
+}
