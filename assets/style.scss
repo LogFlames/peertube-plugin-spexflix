@@ -100,7 +100,18 @@
 
         &::before {
             opacity: 1;
-            color: red;
+            content: "";
+            background-color: red;
+
+            width: 14px;
+            height: 14px;
+            border-radius: 100%;
+            
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(50%, -50%);
+
         }
     }
 
