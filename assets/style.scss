@@ -12,18 +12,23 @@
 	background-image: url(https://spexflix-cms.karspexet.se/plugins/spexflix/1.0.0/static/images/site-spinner.png);
 	background-repeat: no-repeat;
 	background-size: 100%;
+
+	position: absolute;
 	bottom: 1px;
 	left: 1px;
-	margin: auto;
-	position: absolute;
 	right: 1px;
-	text-align: center;
 	top: 1px;
+
+
     border: none;
     height: 7vh;
     width: 7vh;
     min-width: 5rem;
     min-height: 5rem;
+
+	margin: auto;
+	text-align: center;
+
     visibility: visible !important;
     opacity: 1 !important;
 }
@@ -44,9 +49,46 @@
 #custom-css .video-js .vjs-big-play-button {
     border-color: rgba(255, 255, 255, 0.5);
     background-color: rgba(0, 0, 0, 0.3);
+
+    &:hover {
+        border-color: rgba(255, 255, 255, 1.0);
+        background-color: rgba(0, 0, 0, 1.0);
+    }
 }
 
-#custom-css .video-js .vjs-big-play-button:hover {
-    border-color: rgba(255, 255, 255, 1.0);
-    background-color: rgba(0, 0, 0, 1.0);
+// --- PROGRESS BAR ---
+#custom-css .video-js {
+    .vjs-mouse-display {
+        background-color: #fff;
+    }
+
+    .vjs-time-tooltip {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .vjs-marker {
+        background-color: rgba(255, 255, 255, 0.8);
+        width: 4px;
+    }
+
+    .vjs-progress-control {
+        height: 0.3em;
+    }
+
+    .vjs-progress-holder {
+        background-color: gray;
+    }
+    
+    .vjs-load-progress {
+        background-color: lightgray;
+    }
+
+    .vjs-play-progress {
+        background-color: red;
+
+        ::before {
+            opacity: 1;
+            color: red;
+        }
+    }
 }
