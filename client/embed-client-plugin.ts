@@ -8,7 +8,9 @@ async function register ({ registerHook, peertubeHelpers }: RegisterClientOption
   registerHook({
     target: 'action:embed.player.loaded',
     handler: () => {
-      console.log("hello em");
+      window.addEventListener("contextmenu", (e: MouseEvent) => {
+        e.preventDefault();
+      })
     }
   });
 }

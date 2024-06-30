@@ -5,12 +5,6 @@ import type { Video } from '@peertube/peertube-types'
 */
 
 async function register ({ registerHook, peertubeHelpers }: RegisterClientOptions): Promise<void> {
-  registerHook({
-    target: 'action:embed.player.loaded',
-    handler: () => {
-      console.log("hello vw");
-    }
-  });
 }
 
 export {
