@@ -3,6 +3,7 @@
   "description": "Spexflix plugin for use within Kårspexet",
   "version": "0.0.1",
   "author": "LogFlames",
+  "bugs": "https://github.com/LogFlames/peertube-plugin-spexflix/issues",
   "clientScripts": [
     {
       "script": "dist/common-client-plugin.js",
@@ -30,6 +31,7 @@
   "staticDirs": {
     "images": "public/images"
   },
+  "translations": {},
   "devDependencies": {
     "esbuild": "^0.14.36"
   }
