@@ -3,7 +3,6 @@
   "description": "Spexflix plugin for use within Kårspexet",
   "version": "0.0.1",
   "author": "LogFlames",
-  "bugs": "",
   "clientScripts": [
     {
       "script": "dist/common-client-plugin.js",
