@@ -58,17 +58,16 @@
 
 // --- PROGRESS BAR ---
 #custom-css .video-js {
-    .vjs-control {
-        &:focus {
-            text-shadow: 0em 0em 0em white;
-        }
+    .vjs-control:focus {
+        text-shadow: 0em 0em 0em white;
+    }
 
+    .vjs-control.vjs-button {
         transition: transform .1s;
 
         &:hover {
             transform: scale(1.2);
         }
-
     }
 
     .vjs-mouse-display {
