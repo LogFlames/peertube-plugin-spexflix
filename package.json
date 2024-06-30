@@ -1,33 +1,44 @@
 {
   "name": "peertube-plugin-spexflix",
-  "description": "Spexflix plugin for use within Kårspexet",
-  "version": "0.0.1",
-  "author": "LogFlames",
-  "bugs": "https://github.com/LogFlames/peertube-plugin-spexflix/issues",
-  "license": "SEE LICENSE IN LICENSE",
+  "description": "PeerTube plugin for use on Spexflix",
+  "version": "1.0.0",
+  "license": "AGPL-3.0",
+  "author": {
+    "name": "Elias Lundell",
+    "url": "https://github.com/LogFlames"
+  },
+  "bugs": "https://github.com/Logflames/peertube-plugin-spexflix/issues",
   "clientScripts": [
     {
-      "script": "dist/common-client-plugin.js",
+      "script": "dist/client/common-client-plugin.js",
       "scopes": [
         "common"
       ]
     }
   ],
   "css": [
-    "assets/style.css"
+    "dist/assets/style.css"
   ],
   "engine": {
-    "peertube": ">=1.3.0"
+    "peertube": ">=4.2.0"
   },
   "homepage": "https://github.com/LogFlames/peertube-plugin-spexflix",
   "keywords": [
     "peertube",
     "plugin"
   ],
-  "library": "./main.js",
+  "library": "./dist/server/main.js",
   "scripts": {
+    "clean": "rm -rf dist/*",
     "prepare": "npm run build",
-    "build": "node ./scripts/build.js",
+    "check:client:tsc": "npx tsc --p client/tsconfig.json --noEmit",
+    "build:server": "npx tsc --build server/tsconfig.json",
+    "build:client": "node ./scripts/build.js",
+    "build:styles": "npx sass --no-source-map assets:dist/assets",
+    "build": "npm-run-all -s clean check:client:tsc -p build:server build:client build:styles",
+    "lint:script": "npx eslint --ext .ts --ext .js .",
+    "lint:styles": "stylelint 'assets/**/*.scss'",
+    "test": "npm-run-all -p lint:script lint:styles",
     "reinstall": "cd /var/www/peertube/peertube-latest/ && NODE_ENV=production NODE_CONFIG_DIR=/var/www/peertube/config yarn plugin:uninstall -n peertube-plugin-spexflix && NODE_ENV=production NODE_CONFIG_DIR=/var/www/peertube/config yarn plugin:install -p /home/peertube/peertube-plugin-spexflix"
   },
   "staticDirs": {
@@ -35,6 +46,18 @@
   },
   "translations": {},
   "devDependencies": {
-    "esbuild": "^0.14.36"
+    "@peertube/peertube-types": "^4.2.2",
+    "@tsconfig/node16": "^1.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "@typescript-eslint/parser": "^5.33.0",
+    "esbuild": "^0.14.36",
+    "eslint": "^8.21.0",
+    "eslint-config-standard-with-typescript": "^22.0.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.54.5",
+    "stylelint": "^14.11.0",
+    "stylelint-config-recommended-scss": "^7.0.0",
+    "stylelint-config-standard-scss": "^5.0.0",
+    "typescript": "^4.7.4"
   }
 }
